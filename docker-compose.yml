@@ -1,0 +1,12 @@
+version: '3'
+services:
+  raceserver:
+#    build: .
+    image: acc-server
+    container_name: acc-svr-1
+    restart: always
+    ports:
+      - 9600:9600
+      - 9600:9600/udp
+    volumes:
+      -  $PWD:/home/acc
